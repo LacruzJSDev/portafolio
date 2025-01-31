@@ -1,0 +1,25 @@
+@keyframes slideForward {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideBackward {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.forward {
+	animation: slideForward 0.5s ease-in-out;
+}
+
+.backward {
+	animation: slideBackward 0.5s ease-in-out;
+}
