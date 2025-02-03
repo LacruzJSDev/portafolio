@@ -6,8 +6,8 @@ interface DividerProps {
 	color?: string;
 }
 
-const Divider: FC<DividerProps> = ({ width = 'w-full', height = 'h-0.5', color = 'bg-black' }) => {
-	return <div className={`divider ${width} ${height} ${color}`}></div>;
+const Divider: FC<DividerProps> = ({ width = 'w-full', height = '1px', color = 'bg-black' }) => {
+	return <div style={{ height }} className={`divider ${width} ${color}`}></div>;
 };
 
 export default Divider;

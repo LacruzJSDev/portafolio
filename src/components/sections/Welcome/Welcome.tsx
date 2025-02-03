@@ -1,61 +1,91 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import mySelf from '../../../assets/images/mySelf.png';
 import LinkedIn from '../../../assets/icons/companies/LinkedIn';
 import GitHub from '../../../assets/icons/companies/GitHub';
 import React from '../../../assets/icons/companies/React';
-import MongoDB from '../../../assets/icons/companies/MongoDb';
+import MongoDB from '../../../assets/icons/companies/MongoDB';
 import ExpressJS from '../../../assets/icons/companies/ExpressJS';
 import Node from '../../../assets/icons/companies/NodeJS.svg';
 import Divider from '../../UI/Divider/Divider';
+import Email from '../../../assets/icons/interface/Email';
 
 const Welcome: FC = () => {
+	const [isCopied, setIsCopied] = useState<boolean>(false);
+
+	const handleCopy = async (whatToCopy: string) => {
+		try {
+			await navigator.clipboard.writeText(whatToCopy);
+			setIsCopied(true);
+			setTimeout(() => setIsCopied(false), 2000);
+		} catch (error) {
+			console.error('Error al copiar el correo:', error);
+		}
+	};
 	return (
-		<section className='relative flex flex-col md:flex-row w-full h-full'>
-			<h1 className='text-primary-700 font-oswald-bold absolute top-2/8 left-1/10 text-6xl md:text-9xl lg:7xl whitespace-break-spaces mg:whitespace-nowrap z-10'>Juan Carlos Lacruz Lacruz</h1>
-			<div className='w-full md:w-1/2 h-1/2 md:h-full overflow-hidden'>
-				<img src={mySelf} alt='Me self photography' className='w-full h-full object-cover object-[center_20%] md:object-center' />
+		<section>
+			<div className='first-part-of-section'>
+				<img src={mySelf} alt='Me self photography' className='object-[center_20%] md:object-top' />
 			</div>
-			<div className='w-full md:w-1/2 h-1/2 md:h-full overflow-hidden'>
-				<div className='flex flex-col gap-4 justify-items-start md:justify-end h-full p-6 md:pb-16'>
+			<div className='second-part-of-section'>
+				<h1 className='text-highlight-primary-900 mb-8 md:mb-28 mt-0 md:mt-8'>Juan Carlos Lacruz Lacruz</h1>
+				<div className='flex flex-col gap-4 justify-items-start h-full '>
 					<div>
-						<h2 className='text-5xl md:7xl '>Desarrollardor FullStack MERN</h2>
-						<Divider />
+						<h2>Desarrollardor FullStack MERN</h2>
+						<Divider color='bg-highlight-primary-900' height='3px' />
 					</div>
-					<div className='flex flex-col gap-0 md:gap-4 mt-0 lg:mt-6'>
-						<h3 className='text-3xl md:5xl'>Tecnologías</h3>
-						<div className='flex gap-10 p-1'>
-							<div className='flex flex-col items-center'>
-								<MongoDB className='fill-black' size={30} />
-								<p className='whitespace-nowrap'>Mongo DB</p>
-							</div>
-							<div className='flex flex-col items-center'>
-								<ExpressJS className='fill-black' size={30} />
-								<p className='whitespace-nowrap'>Express JS</p>
-							</div>
-							<div className='flex flex-col items-center'>
-								<React className={'fill-black'} size={30} />
-								<p className='whitespace-nowrap'>React</p>
-							</div>
-							<div className='flex flex-col items-center h-[30px] w-[30px]'>
-								<img src={Node} alt='Node JS Icon' />
-								<p className='whitespace-nowrap'>Node</p>
+					<div className='flex flex-col gap-8 mt-0 lg:mt-6 '>
+						<div className='icon-list-container'>
+							<h3>Tecnologías Principales</h3>
+							<div className='icon-list-content'>
+								<div className='icon-card'>
+									<div className='icon'>
+										<MongoDB className='fill-black' size={30} />
+									</div>
+									<p className='whitespace-nowrap'>Mongo DB</p>
+								</div>
+								<div className='icon-card'>
+									<div className='icon'>
+										<ExpressJS className='fill-black' size={30} />
+									</div>
+									<p className='whitespace-nowrap'>Express JS</p>
+								</div>
+								<div className='icon-card'>
+									<div className='icon'>
+										<React className={'fill-black'} size={30} />
+									</div>
+									<p className='whitespace-nowrap'>React</p>
+								</div>
+								<div className='icon-card h-[30px] w-[30px]'>
+									<img src={Node} alt='Node JS Icon' />
+									<p className='whitespace-nowrap'>Node</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className='flex flex-col gap-4'>
-						<h3 className='text-3xl md:5xl'>Conécta</h3>
-						<div className='flex gap-10 p-1'>
-							<div>
-								<a className='cursor-pointer flex flex-col items-center' href=''>
-									<LinkedIn className={'fill-black'} size={30} />
-									<p>LinkedlIn</p>
-								</a>
-							</div>
-							<div>
-								<a className='cursor-pointer flex flex-col items-center' href='https://github.com/LacruzJSDev' target='_blank'>
-									<GitHub className='fill-black' size={30} />
-									<p>GitHub</p>
-								</a>
+						<div className='icon-list-container'>
+							<h3>Conécta</h3>
+							<div className='icon-list-content'>
+								<div className='icon-card'>
+									<a className='icon-container' href='https://es.linkedin.com/in/juan-carlos-lacruz-lacruz' target='_blank'>
+										<div className='icon'>
+											<LinkedIn className={'fill-black'} size={30} />
+										</div>
+										<p>LinkedlIn</p>
+									</a>
+								</div>
+								<div className='icon-card'>
+									<a className='icon-container' href='https://github.com/LacruzJSDev' target='_blank'>
+										<div className='icon'>
+											<GitHub className='fill-black' size={30} />
+										</div>
+										<p>GitHub</p>
+									</a>
+								</div>
+								<div className='icon-card' onClick={() => handleCopy('jclacruzlacruz@icloud.com')}>
+									<div className='icon'>
+										<Email className='fill-black' />
+									</div>
+									<p>{isCopied ? '¡Copiado!' : 'Correo'}</p>
+								</div>
 							</div>
 						</div>
 					</div>
