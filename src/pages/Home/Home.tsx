@@ -37,9 +37,9 @@ const Home: FC = () => {
 	};
 
 	return (
-		<div className='relative w-screen h-screen overflow-hidden'>
+		<div className='relative w-screen h-[100dvh] md:h-screen overflow-hidden'>
 			<CornerFullscreenV1 />
-			<div className={'absolute z-20 top-60'}>
+			<div className={'absolute z-20 top-35'}>
 			<IndexList setCurrentSectionIndex={setCurrentSectionIndex}/>
 			</div>
 			<div className='relative w-full h-full'>
