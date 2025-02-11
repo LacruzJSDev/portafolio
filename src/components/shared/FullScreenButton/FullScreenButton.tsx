@@ -43,7 +43,7 @@ const FullscreenButton: FC = () => {
 
 export const CornerFullscreenV1: FC<CornerFullScreen> = ({ bgColorClass = 'border-t-highlight-primary-900' }) => {
 	return (
-		<div className='absolute top-0 right-0 z-10'>
+		<div className='absolute hidden md:visible top-0 right-0 z-10'>
 			<div className='w-32 h-32 overflow-hidden'>
 				<div
 					className={`${bgColorClass} absolute top-0 right-0 w-0 h-0 

@@ -39,8 +39,8 @@ const Home: FC = () => {
 	return (
 		<div className='relative w-screen h-[100dvh] md:h-screen overflow-hidden'>
 			<CornerFullscreenV1 />
-			<div className={'absolute z-20 top-35'}>
-			<IndexList setCurrentSectionIndex={setCurrentSectionIndex}/>
+			<div className={'absolute z-20 top-[20%] w-full md:w-40'}>
+			<IndexList setCurrentSectionIndex={setCurrentSectionIndex} currentSectionIndex={currentSectionIndex}/>
 			</div>
 			<div className='relative w-full h-full'>
   {sections.map((section, index) => (
@@ -64,7 +64,7 @@ const Home: FC = () => {
 				<Button label='anterior' bgColorClass='bg-highlight-primary-900' onClick={prevSection} className='hover:scale-[1.1]'/>
 				<Button label='siguiente' bgColorClass='bg-highlight-primary-900' onClick={nextSection} className='hover:scale-[1.1]'/>
 			</div>
-			<div className='absolute bottom-0 left-0 flex flex-col justify-center items-center md:hidden w-full px-16'>
+			<div className='absolute bottom-0 right-4 flex flex-col justify-center items-center md:hidden w-4'>
 				<div className='h-[50px] w-[50px]'>
 				{currentSectionIndex > 0 && <div className='cursor-pointer' onClick={prevSection}><CaretUp size={50} className={'fill-highlight-primary-900'}/></div>}
 				</div>

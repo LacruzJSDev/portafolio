@@ -106,10 +106,10 @@ section {
 	@apply relative flex flex-col md:flex-row w-full h-full;
 }
 .first-part-of-section {
-	@apply w-full md:w-1/3 h-[30%] md:h-full overflow-hidden;
+	@apply w-full md:w-1/3 h-[30%] md:h-full
 }
 .second-part-of-section {
-	@apply w-full md:w-2/3 h-[70%] md:h-full overflow-hidden px-6;
+	@apply w-full md:w-2/3 h-[70%] md:h-full px-6 md:py-24;
 }
 img {
 	@apply w-full h-full object-cover;
@@ -133,7 +133,7 @@ img {
 	@apply w-[30px] h-[30px];
 }
 h1 {
-	@apply font-oswald-bold text-5xl md:text-7xl lg:text-8xl whitespace-break-spaces z-10;
+	@apply font-oswald-bold text-6xl md:text-7xl lg:text-8xl whitespace-break-spaces z-10;
 }
 h2 {
 	@apply text-3xl md:text-6xl;
