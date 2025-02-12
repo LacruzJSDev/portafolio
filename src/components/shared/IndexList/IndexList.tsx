@@ -18,7 +18,7 @@ const menuItems = [
 const IndexList: FC<IndexListProps> = ({ setCurrentSectionIndex, currentSectionIndex }) => {
   return (
     <>
-      <ul className="flex flex-row md:flex-col justify-center items-center md:items-start p-10 space-x-4 md:space-x-0 md:space-y-2">
+      <ul className="flex z-50 flex-row md:flex-col justify-center items-center md:items-start p-10 space-x-4 md:space-x-0 md:space-y-2">
         {menuItems.map(({ label, icon: Icon, index }) => (
           <li
             key={index}

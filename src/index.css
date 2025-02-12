@@ -106,10 +106,10 @@ section {
 	@apply relative flex flex-col md:flex-row w-full h-full;
 }
 .first-part-of-section {
-	@apply w-full md:w-1/3 h-[30%] md:h-full
+	@apply w-full md:w-1/3 h-[30%] md:h-full;
 }
 .second-part-of-section {
-	@apply w-full md:w-2/3 h-[70%] md:h-full px-6 md:py-24;
+	@apply w-full md:w-2/3 h-[70%] md:h-full md:py-24;
 }
 img {
 	@apply w-full h-full object-cover;

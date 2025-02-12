@@ -18,7 +18,7 @@ const Works: FC = () => {
           complementadas por una perspectiva global y adaptabilidad cultural.
         </p>
       </div>
-      <div className="second-part-of-section grid gap-6">
+      <div className="second-part-of-section grid gap-6 px-4 py-2">
         {[
           {
             title: "Scais S.L.",

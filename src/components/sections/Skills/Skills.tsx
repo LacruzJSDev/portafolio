@@ -7,7 +7,7 @@ const Skills: FC = () => {
       <div className="first-part-of-section p-6 bg-primary-500 text-center">
         <h1 className="text-primary-900 mb-8 text-4xl font-bold">Habilidades</h1>
       </div>
-      <div className="second-part-of-section p-6 grid gap-6">
+      <div className="second-part-of-section px-4 py-2 grid gap-6">
         {[
           { title: "Frontend Development", content: "HTML, CSS, JavaScript, TypeScript, React, Next.js" },
           { title: "Backend & APIs", content: "Node.js, Express, REST API, MongoDB, MySQL, Sequelize, Mongoose" },

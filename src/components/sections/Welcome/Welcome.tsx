@@ -31,8 +31,8 @@ const Welcome: FC = () => {
           className="object-[center_20%] md:object-top"
         />
       </div>
-      <div className="second-part-of-section relative">
-        <div className="flex flex-col gap-4 h-full justify-start pt-6 md:justify-center">
+      <div className="second-part-of-section relative px-4 py-2 ">
+        <div className="flex flex-col gap-4 h-full justify-start md:justify-center">
           <h1 className="text-primary-600">Juan Carlos Lacruz Lacruz</h1>
           <div>
             <h2>Desarrollador Full Stack</h2>
