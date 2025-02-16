@@ -1,5 +1,4 @@
 import { FC } from "react";
-import mySelf from "../../../assets/images/mySelf.webp";
 import LinkedIn from "../../../assets/icons/companies/LinkedIn";
 import GitHub from "../../../assets/icons/companies/GitHub";
 import ReactIcon from "../../../assets/icons/companies/React";
@@ -20,7 +19,7 @@ const Welcome: FC = () => {
     <section>
       <div className="first-part-of-section relative">
         <img
-          src={mySelf}
+          src='images/mySelf.webp'
           alt="Me self photography"
           className="object-[center_20%] lg:object-top"
         />

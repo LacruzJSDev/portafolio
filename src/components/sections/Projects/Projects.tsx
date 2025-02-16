@@ -2,14 +2,22 @@ import { FC } from "react";
 import ExpandableCard from "../../shared/ExpandableCard/ExpandableCard";
 import ExpandableImage from "../../shared/ExpandableImage/ExpandableImage";
 
-const images = import.meta.glob(
-  "/src/assets/images/resiAdminProyect/*.{png,jpg,jpeg,svg,webp}"
-);
 
-const imagesArray = Object.keys(images).map((path) => ({
-  path,
-  import: images[path],
-}));
+const imagesArray = [
+  "/images/resiAdminProyect/resiAdminProyect_image1.webp",
+	"/images/resiAdminProyect/resiAdminProyect_image2.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image3.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image4.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image5.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image6.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image7.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image8.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image9.webp",
+  "/images/resiAdminProyect/resiAdminProyect_image10.webp",
+];
+
+
+console.log("imagesArray", imagesArray);
 
 const proyects = [
   {
@@ -19,8 +27,10 @@ const proyects = [
     children: (
       <div>
         <div className="flex flex-wrap justify-center gap-2">
-          {imagesArray.map((image) => (
-            <ExpandableImage src={image.path} alt="Resi Admin" />
+          {imagesArray.map((src, index) => (
+						<div key={index}>
+							<ExpandableImage src={src} alt="Resi Admin" />
+						</div>
           ))}
         </div>
         <div className="flex flex-col items-center">
