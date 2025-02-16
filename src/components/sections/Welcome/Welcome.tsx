@@ -22,11 +22,11 @@ const Welcome: FC = () => {
         <img
           src={mySelf}
           alt="Me self photography"
-          className="object-[center_20%] md:object-top"
+          className="object-[center_20%] lg:object-top"
         />
       </div>
       <div className="second-part-of-section relative px-4 py-2 ">
-        <div className="flex flex-col gap-4 h-full justify-start md:justify-center">
+        <div className="flex flex-col gap-4 h-full justify-start lg:justify-center">
           <h1 className="text-primary-600">Juan Carlos Lacruz Lacruz</h1>
           <div>
             <h2>Desarrollador Full Stack</h2>
@@ -87,7 +87,7 @@ const Welcome: FC = () => {
             </div>
           </div>
           </div>
-          <div className="github-widget hidden md:block">
+          <div className="github-widget hidden lg:block">
             <h3>Mi Actividad en GitHub</h3>
             <GitHubCalendar
               username="LacruzJSDev"

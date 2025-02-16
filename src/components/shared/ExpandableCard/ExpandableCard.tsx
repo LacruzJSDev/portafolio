@@ -1,7 +1,13 @@
-import { FC, useState } from "react";
+import { FC, ReactNode, useState } from "react";
 import { createPortal } from "react-dom";
 
-const ExpandableCard: FC<{ title: string; content: string }> = ({ title, content }) => {
+interface ExpandableCardProps {
+  title: string;
+  content: string;
+  children?: ReactNode;
+}
+
+const ExpandableCard: FC<ExpandableCardProps> = ({ title, content, children }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getSummary = (text: string) =>
@@ -18,10 +24,9 @@ const ExpandableCard: FC<{ title: string; content: string }> = ({ title, content
       </div>
       {createPortal(
         <div
-          className={`fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center p-10 overflow-auto transition-opacity duration-300 ${
+          className={`fixed inset-0 z-[100] bg-white flex flex-col items-center justify-start lg:justify-center p-10 overflow-auto transition-opacity duration-300 ${
             isExpanded ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
-          onClick={() => setIsExpanded(false)}
         >
           <button
             className="absolute top-4 right-4 p-2 bg-gray-200 w-[50px] h-[50px] rounded-full cursor-pointer"
@@ -33,7 +38,8 @@ const ExpandableCard: FC<{ title: string; content: string }> = ({ title, content
             <span className="text-xl font-bold">X</span>
           </button>
           <h3 className="text-2xl font-bold mb-4 text-center">{title}</h3>
-          <p className="text-gray-700 text-center max-w-2xl">{content}</p>
+          <p className="text-gray-700 text-center max-w-2xl mb-4">{content}</p>
+          {children && children }
         </div>,
         document.body
       )}

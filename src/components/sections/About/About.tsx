@@ -64,12 +64,12 @@ const About: FC = () => {
         {cardGroups.map((group, index) => (
           <div
             key={index}
-            className="flex-shrink-0 snap-start w-auto md:w-96 px-4"
+            className="flex-shrink-0 snap-start w-auto lg:w-96 px-4"
           >
             {group.map((card, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 snap-start w-90 md:w-96 mb-8"
+                className="flex-shrink-0 snap-start w-90 lg:w-96 mb-8"
               >
                 <ExpandableCard title={card.title} content={card.content} />
               </div>

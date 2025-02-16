@@ -107,13 +107,13 @@ html, body, div {
 }
 
 section {
-	@apply relative flex flex-col md:flex-row w-full h-full;
+	@apply relative flex flex-col lg:flex-row w-full h-full;
 }
 .first-part-of-section {
-	@apply w-full md:w-1/3 h-[30%] md:h-full;
+	@apply w-full lg:w-1/3 h-[30%] lg:h-full;
 }
 .second-part-of-section {
-	@apply w-full md:w-2/3 h-[70%] md:h-full md:py-24 bg-gray-50;
+	@apply w-full lg:w-2/3 h-[70%] lg:h-full lg:py-24 bg-gray-50;
 }
 img {
 	@apply w-full h-full object-cover;
@@ -137,11 +137,11 @@ img {
 	@apply w-[30px] h-[30px];
 }
 h1 {
-	@apply font-oswald-bold text-6xl md:text-7xl lg:text-8xl whitespace-break-spaces z-10;
+	@apply font-oswald-bold text-6xl lg:text-7xl lg:text-8xl whitespace-break-spaces z-10;
 }
 h2 {
-	@apply text-3xl md:text-6xl;
+	@apply text-3xl lg:text-6xl;
 }
 h3 {
-	@apply text-2xl md:text-4xl;
+	@apply text-2xl lg:text-4xl;
 }

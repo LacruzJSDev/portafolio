@@ -67,11 +67,11 @@ const Home: FC = () => {
   };
 
   return (
-    <div className="relative w-screen h-svh md:h-screen overflow-hidden" ref={divRef}>
-      <div className="absolute z-10 hidden md:block top-0 right-0">
+    <div className="relative w-screen h-svh lg:h-screen overflow-hidden" ref={divRef}>
+      <div className="absolute z-10 hidden lg:block top-0 right-0">
         <CornerFullscreenV1 />
       </div>
-      <div className={"absolute z-10 top-[20%] w-full md:w-40"}>
+      <div className={"absolute z-10 top-[20%] w-full lg:w-40"}>
         <IndexList
           setCurrentSectionIndex={setCurrentSectionIndex}
           currentSectionIndex={currentSectionIndex}
@@ -85,10 +85,10 @@ const Home: FC = () => {
         absolute top-0 left-0 w-full h-full transition-transform duration-500 ease-in-out
         ${
           index === currentSectionIndex
-            ? "translate-x-0 md:translate-x-0"
+            ? "translate-x-0 lg:translate-x-0"
             : index < currentSectionIndex
-            ? "translate-y-full md:-translate-x-full"
-            : "translate-y-full md:translate-x-full"
+            ? "translate-y-full lg:-translate-x-full"
+            : "translate-y-full lg:translate-x-full"
         }
       `}
           >
@@ -96,7 +96,7 @@ const Home: FC = () => {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-0 left-0 hidden md:flex justify-between w-full px-16 py-4">
+      <div className="absolute bottom-0 left-0 hidden lg:flex justify-between w-full px-16 py-4">
         <Button
           label="anterior"
           bgColorClass="bg-highlight-primary-900"
@@ -110,7 +110,7 @@ const Home: FC = () => {
           className="hover:scale-[1.1]"
         />
       </div>
-      <div className="absolute bottom-0 right-4 flex flex-col justify-center items-center md:hidden w-4">
+      <div className="absolute bottom-0 right-4 flex flex-col justify-center items-center lg:hidden w-4">
         <div className="h-[50px] w-[50px]">
           {currentSectionIndex > 0 && (
             <div className="cursor-pointer" onClick={prevSection}>

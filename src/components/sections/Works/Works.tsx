@@ -8,10 +8,10 @@ const Works: FC = () => {
         <h1 className="text-primary-900 mb-8 text-4xl font-bold">
           Experiencia
         </h1>
-        <p className="block md:hidden text-lg text-center">
+        <p className="block lg:hidden text-lg text-center">
           Profesional versátil con experiencia internacional.
         </p>
-        <p className="hidden md:block w-full md:w-3/4 mx-auto text-lg leading-relaxed">
+        <p className="hidden lg:block w-full lg:w-3/4 mx-auto text-lg leading-relaxed">
           Profesional versátil con experiencia internacional y formación
           multidisciplinaria. Ocho años de experiencia laboral en Berlín han
           forjado habilidades sólidas en productividad y trabajo en equipo,

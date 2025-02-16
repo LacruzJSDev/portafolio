@@ -22,17 +22,17 @@ const Contact: FC = () => {
         <div>
           <h2>Ubicación</h2>
           <Divider color="bg-highlight-primary-900" height="3px" />
-          <div className="mt-2 md:mt-4">
+          <div className="mt-2 lg:mt-4">
             <p className="text-xl text-gray-800">Afincado en Valencia.</p>
             <p className="text-xl text-gray-900">
               Abierto al teletrabajo o ubicaciones diferentes dentro de España.
             </p>
           </div>
         </div>
-        <div className="mt-4 md:mt-8">
+        <div className="mt-4 lg:mt-8">
           <h2>Correo eléctrónico</h2>
           <Divider color="bg-highlight-primary-900" height="3px" />
-          <div className="flex items-center gap-4 mt-2 md:mt-4">
+          <div className="flex items-center gap-4 mt-2 lg:mt-4">
             <div>
               <p className="text-xl text-gray-800">
                 jc.lacruzlacruz@icloud.com
@@ -51,10 +51,10 @@ const Contact: FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-4 md:mt-8">
+        <div className="mt-4 lg:mt-8">
           <h2>LinkedIn</h2>
           <Divider color="bg-highlight-primary-900" height="3px" />
-          <div className="mt-2 md:mt-4">
+          <div className="mt-2 lg:mt-4">
             <a href={linkedIn} target="_blank" rel="noreferrer">
               <p className="text-xl text-gray-800 underline inline">
                 Perfil profesional orientado como programador FullStack.
@@ -62,10 +62,10 @@ const Contact: FC = () => {
             </a>
           </div>
         </div>
-				<div className="mt-4 md:mt-8">
+				<div className="mt-4 lg:mt-8">
           <h2>GitHub</h2>
           <Divider color="bg-highlight-primary-900" height="3px" />
-          <div className="mt-2 md:mt-4">
+          <div className="mt-2 lg:mt-4">
             <a href={gitHub} target="_blank" rel="noreferrer">
               <p className="text-xl text-gray-800 underline inline">
                 Repositorio de proyectos y código de interés.
