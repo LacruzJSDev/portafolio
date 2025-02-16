@@ -16,7 +16,7 @@ const ExpandableCard: FC<ExpandableCardProps> = ({ title, content, children }) =
   return (
     <>
       <div
-        className="relative bg-gray-50 px-6 py-2 rounded-lg shadow-md transition-all cursor-pointer min-h-[7rem] max-h-[7rem]"
+        className="relative bg-gray-50 px-6 py-6 rounded-lg shadow-md transition-all cursor-pointer min-h-[7rem] max-h-[7rem]"
         onClick={() => setIsExpanded(true)}
       >
         <h3 className="text-xl font-semibold underline">{title}</h3>
@@ -24,7 +24,7 @@ const ExpandableCard: FC<ExpandableCardProps> = ({ title, content, children }) =
       </div>
       {createPortal(
         <div
-          className={`fixed inset-0 z-[100] bg-white flex flex-col items-center justify-start lg:justify-center p-10 overflow-auto transition-opacity duration-300 ${
+          className={`fixed inset-0 z-[100] bg-white flex flex-col items-center justify-start lg:justify-center px-10 pt-20 pb-4 overflow-auto transition-opacity duration-300 ${
             isExpanded ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
