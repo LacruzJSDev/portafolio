@@ -102,6 +102,10 @@
 	--color-highlight-complementary-800: #ed6f75;
 	--color-highlight-complementary-900: #eb5f66;
 }
+html, body, div {
+  overscroll-behavior: none;
+}
+
 section {
 	@apply relative flex flex-col md:flex-row w-full h-full;
 }
