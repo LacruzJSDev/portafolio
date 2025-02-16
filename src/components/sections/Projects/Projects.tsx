@@ -56,8 +56,6 @@ const proyects = [
   },
 ];
 const Projects: FC = () => {
-  console.log("imagesArray", imagesArray);
-
   return (
     <section>
       <div className="first-part-of-section p-6 flex flex-col items-center bg-primary-500">
