@@ -40,10 +40,10 @@ const Welcome: FC = () => {
           <div className="icon-list-container">
             <h3>Tecnologías Principales</h3>
             <div className="icon-list-content">
-              {[MongoDB, ExpressJS, ReactIcon].map((Icon, idx) => (
+              {[{Icon: MongoDB, name: 'Mongo DB'}, {Icon: ExpressJS, name: 'Espress JS'}, {Icon: ReactIcon, name: 'React'}].map((Icon, idx) => (
                 <div key={idx} className="icon-card">
                   <div className="icon">
-                    <Icon className="fill-black" size={30} />
+                    <Icon.Icon className="fill-black" size={30} />
                   </div>
                   <p className="whitespace-nowrap">{Icon.name}</p>
                 </div>
