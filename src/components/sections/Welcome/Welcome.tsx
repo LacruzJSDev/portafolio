@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import mySelf from "../../../assets/images/mySelf.webp";
 import LinkedIn from "../../../assets/icons/companies/LinkedIn";
 import GitHub from "../../../assets/icons/companies/GitHub";
@@ -8,19 +8,13 @@ import ExpressJS from "../../../assets/icons/companies/ExpressJS";
 import Node from "../../../assets/icons/companies/NodeJS.svg";
 import Divider from "../../UI/Divider/Divider";
 import Email from "../../../assets/icons/interface/Email";
+import useCopyBoard from "../../../hooks/useCopyBoard";
+import GitHubCalendar from "react-github-calendar";
 
 const Welcome: FC = () => {
-  const [isCopied, setIsCopied] = useState<boolean>(false);
-
-  const handleCopy = async (whatToCopy: string) => {
-    try {
-      await navigator.clipboard.writeText(whatToCopy);
-      setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000);
-    } catch (error) {
-      console.error("Error al copiar el correo:", error);
-    }
-  };
+  const { handleCopy, isCopied } = useCopyBoard({
+    whatToCopy: "jclacruzlacruz@icloud.com",
+  });
 
   return (
     <section>
@@ -42,6 +36,8 @@ const Welcome: FC = () => {
             Apasionado por la tecnología, el aprendizaje continuo y la
             resolución inteligente de problemas en cada línea de código.
           </p>
+          <div className="flex gap-8">
+          <div className="flex flex-col gap-4">
           <div className="icon-list-container">
             <h3>Tecnologías Principales</h3>
             <div className="icon-list-content">
@@ -83,15 +79,24 @@ const Welcome: FC = () => {
                 </a>
               </div>
               <div className="icon-card h-[30px] w-[30px]">
-                <div
-                  className="icon"
-                  onClick={() => handleCopy("jclacruzlacruz@icloud.com")}
-                >
+                <div className="icon" onClick={handleCopy}>
                   <Email className="fill-black" />
                   <p>{isCopied ? "¡Copiado!" : "Correo"}</p>
                 </div>
               </div>
             </div>
+          </div>
+          </div>
+          <div className="github-widget hidden md:block">
+            <h3>Mi Actividad en GitHub</h3>
+            <GitHubCalendar
+              username="LacruzJSDev"
+              colorScheme="light"
+              fontSize={14}
+              blockSize={8}
+              blockMargin={2}
+            />
+          </div>
           </div>
         </div>
       </div>

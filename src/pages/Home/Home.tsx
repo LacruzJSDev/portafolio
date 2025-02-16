@@ -24,14 +24,8 @@ const sections = [
 
 const Home: FC = () => {
   const divRef = useRef<HTMLDivElement | null>(null);
-  const { scrollUp, scrollDown, isAtStart, isAtEnd, resetScroll } =
+  const { scrollUp, scrollDown, resetScroll } =
     useScrollOrTouchDirection(divRef);
-    console.log('initial');
-    console.log("scrollUp", scrollUp);
-    console.log("scrollDown", scrollDown);
-    console.log("isAtStart", isAtStart);
-    console.log("isAtEnd", isAtEnd);
-    console.log('end')
     
   const savedSectionIndex = localStorage.getItem("currentSectionIndex");
   const initialSectionIndex = savedSectionIndex
@@ -54,7 +48,7 @@ const Home: FC = () => {
       setCurrentSectionIndex(prev => prev - 1);
       resetScroll();
     }
-  }, [scrollDown, scrollUp, currentSectionIndex, sections.length]);
+  }, [scrollDown, scrollUp, currentSectionIndex]);
 
   const updateSectionIndex = (index: number) => {
     localStorage.setItem("currentSectionIndex", index.toString());
