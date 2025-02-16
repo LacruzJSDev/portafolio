@@ -21,7 +21,7 @@ const Contact: FC = () => {
       <div className="second-part-of-section p-6">
         <div>
           <h2>Ubicación</h2>
-          <Divider color="bg-primary-900" height="3px" />
+          <Divider color="bg-highlight-primary-900" height="3px" />
           <div className="mt-2 md:mt-4">
             <p className="text-xl text-gray-800">Afincado en Valencia.</p>
             <p className="text-xl text-gray-900">
@@ -31,7 +31,7 @@ const Contact: FC = () => {
         </div>
         <div className="mt-4 md:mt-8">
           <h2>Correo eléctrónico</h2>
-          <Divider color="bg-primary-900" height="3px" />
+          <Divider color="bg-highlight-primary-900" height="3px" />
           <div className="flex items-center gap-4 mt-2 md:mt-4">
             <div>
               <p className="text-xl text-gray-800">
@@ -53,10 +53,10 @@ const Contact: FC = () => {
         </div>
         <div className="mt-4 md:mt-8">
           <h2>LinkedIn</h2>
-          <Divider color="bg-primary-900" height="3px" />
+          <Divider color="bg-highlight-primary-900" height="3px" />
           <div className="mt-2 md:mt-4">
             <a href={linkedIn} target="_blank" rel="noreferrer">
-              <p className="text-xl text-gray-800 underline">
+              <p className="text-xl text-gray-800 underline inline">
                 Perfil profesional orientado como programador FullStack.
               </p>
             </a>
@@ -64,10 +64,10 @@ const Contact: FC = () => {
         </div>
 				<div className="mt-4 md:mt-8">
           <h2>GitHub</h2>
-          <Divider color="bg-primary-900" height="3px" />
+          <Divider color="bg-highlight-primary-900" height="3px" />
           <div className="mt-2 md:mt-4">
             <a href={gitHub} target="_blank" rel="noreferrer">
-              <p className="text-xl text-gray-800 underline">
+              <p className="text-xl text-gray-800 underline inline">
                 Repositorio de proyectos y código de interés.
               </p>
             </a>
