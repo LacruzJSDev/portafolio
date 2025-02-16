@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import Button from "../../components/UI/Button/Button";
 import Welcome from "../../components/sections/Welcome/Welcome";
 import About from "../../components/sections/About/About";
@@ -11,6 +11,7 @@ import Projects from "../../components/sections/Projects/Projects";
 import Skills from "../../components/sections/Skills/Skills";
 import Works from "../../components/sections/Works/Works";
 import IndexList from "../../components/shared/IndexList/IndexList";
+import useScrollOrTouchDirection from "../../hooks/useScrollDirection";
 
 const sections = [
   { id: "welcome", content: <Welcome /> },
@@ -22,6 +23,16 @@ const sections = [
 ];
 
 const Home: FC = () => {
+  const divRef = useRef<HTMLDivElement | null>(null);
+  const { scrollUp, scrollDown, isAtStart, isAtEnd, resetScroll } =
+    useScrollOrTouchDirection(divRef);
+    console.log('initial');
+    console.log("scrollUp", scrollUp);
+    console.log("scrollDown", scrollDown);
+    console.log("isAtStart", isAtStart);
+    console.log("isAtEnd", isAtEnd);
+    console.log('end')
+    
   const savedSectionIndex = localStorage.getItem("currentSectionIndex");
   const initialSectionIndex = savedSectionIndex
     ? parseInt(savedSectionIndex)
@@ -33,6 +44,17 @@ const Home: FC = () => {
   useEffect(() => {
     updateSectionIndex(currentSectionIndex);
   }, [currentSectionIndex]);
+
+  useEffect(() => {
+    if (scrollDown && currentSectionIndex < sections.length - 1) {
+      setCurrentSectionIndex(prev => prev + 1);
+      resetScroll();
+    }
+    if (scrollUp && currentSectionIndex > 0) {
+      setCurrentSectionIndex(prev => prev - 1);
+      resetScroll();
+    }
+  }, [scrollDown, scrollUp, currentSectionIndex, sections.length]);
 
   const updateSectionIndex = (index: number) => {
     localStorage.setItem("currentSectionIndex", index.toString());
@@ -51,7 +73,7 @@ const Home: FC = () => {
   };
 
   return (
-    <div className="relative w-screen h-svh md:h-screen overflow-hidden">
+    <div className="relative w-screen h-svh md:h-screen overflow-hidden" ref={divRef}>
       <div className="absolute z-10 hidden md:block top-0 right-0">
         <CornerFullscreenV1 />
       </div>

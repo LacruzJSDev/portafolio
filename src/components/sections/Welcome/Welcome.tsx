@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import mySelf from "../../../assets/images/mySelf.png";
+import mySelf from "../../../assets/images/mySelf.webp";
 import LinkedIn from "../../../assets/icons/companies/LinkedIn";
 import GitHub from "../../../assets/icons/companies/GitHub";
 import ReactIcon from "../../../assets/icons/companies/React";

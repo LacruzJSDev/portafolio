@@ -12,7 +12,7 @@ const Skills: FC = () => {
           { title: "Frontend Development", content: "HTML, CSS, JavaScript, TypeScript, React, Next.js" },
           { title: "Backend & APIs", content: "Node.js, Express, REST API, MongoDB, MySQL, Sequelize, Mongoose" },
           { title: "Arquitectura & Escalabilidad", content: "Desarrollo modular, diseño de bases de datos optimizadas, patrones de arquitectura" },
-          { title: "Explorando nuevas tecnologías", content: "Angular, Vue" }
+          { title: "Explorando nuevas tecnologías", content: "Angular, Vue, NestJS" }
         ].map((skill, index) => (
           <ExpandableCard key={index} title={skill.title} content={skill.content} />
         ))}
