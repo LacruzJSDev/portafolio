@@ -3,7 +3,7 @@ import ExpandableCard from "../../shared/ExpandableCard/ExpandableCard";
 import ExpandableImage from "../../shared/ExpandableImage/ExpandableImage";
 
 const images = import.meta.glob(
-  "/src/assets/images/resiAdminProyect/*.{png,jpg,jpeg,svg}"
+  "/src/assets/images/resiAdminProyect/*.{png,jpg,jpeg,svg,webp}"
 );
 
 const imagesArray = Object.keys(images).map((path) => ({
