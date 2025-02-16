@@ -16,9 +16,6 @@ const imagesArray = [
   "/images/resiAdminProyect/resiAdminProyect_image10.webp",
 ];
 
-
-console.log("imagesArray", imagesArray);
-
 const proyects = [
   {
     title: "Resi Admin",
