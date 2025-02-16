@@ -39,7 +39,7 @@ const proyects = [
             target="_blank"
             className="underline"
           >
-            Click Aqui para probar la palicación
+            Click Aqui para probar la aplicación
           </a>
           <p>Usuario de prueba: pepi@pepi.com</p>
           <p>Contraseña: holahola</p>
