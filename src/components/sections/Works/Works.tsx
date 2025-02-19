@@ -5,7 +5,7 @@ import IndexList from "../../shared/IndexList/IndexList";
 const Works: FC = () => {
   return (
     <section>
-      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between md: justify-start items-center">
+      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between md:justify-start items-center">
         <h1 className="text-primary-900 mt-2 md:mt-10 md:mb-10 text-4xl font-bold">
           Experiencia
         </h1>
