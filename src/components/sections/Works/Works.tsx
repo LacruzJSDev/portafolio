@@ -1,14 +1,15 @@
 import { FC } from "react";
 import ExpandableCard from "../../shared/ExpandableCard/ExpandableCard";
+import IndexList from "../../shared/IndexList/IndexList";
 
 const Works: FC = () => {
   return (
     <section>
-      <div className="first-part-of-section p-6 bg-primary-500 text-center">
-        <h1 className="text-primary-900 mb-8 text-4xl font-bold">
+      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between md: justify-start items-center">
+        <h1 className="text-primary-900 mt-2 md:mt-10 md:mb-10 text-4xl font-bold">
           Experiencia
         </h1>
-        <p className="block lg:hidden text-lg text-center">
+        <p className="hidden md:block lg:hidden text-lg text-center">
           Profesional versátil con experiencia internacional.
         </p>
         <p className="hidden lg:block w-full lg:w-3/4 mx-auto text-lg leading-relaxed">
@@ -17,6 +18,9 @@ const Works: FC = () => {
           forjado habilidades sólidas en productividad y trabajo en equipo,
           complementadas por una perspectiva global y adaptabilidad cultural.
         </p>
+        <div className="block md:hidden">
+          <IndexList />
+        </div>
       </div>
       <div className="second-part-of-section grid gap-6 px-4 py-2">
         {[

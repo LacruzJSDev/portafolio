@@ -16,10 +16,10 @@ const ExpandableCard: FC<ExpandableCardProps> = ({ title, content, children }) =
   return (
     <>
       <div
-        className="relative bg-gray-50 px-6 py-6 rounded-lg shadow-md transition-all cursor-pointer min-h-[7rem] max-h-[7rem]"
+        className="relative bg-gray-50 px-6 py-4 rounded-lg shadow-md transition-all cursor-pointer min-h-[7rem] max-h-[7rem]"
         onClick={() => setIsExpanded(true)}
       >
-        <h3 className="text-xl font-semibold underline">{title}</h3>
+        <h3 className="font-semibold underline">{title}</h3>
         <p className="text-gray-700 mt-2">{getSummary(content)}</p>
       </div>
       {createPortal(

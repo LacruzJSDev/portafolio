@@ -1,5 +1,6 @@
 import { FC } from "react";
 import ExpandableCard from "../../shared/ExpandableCard/ExpandableCard";
+import IndexList from "../../shared/IndexList/IndexList";
 
 const About: FC = () => {
   const cards = [
@@ -57,8 +58,11 @@ const About: FC = () => {
 
   return (
     <section>
-      <div className="first-part-of-section p-6 bg-primary-500 text-center">
-        <h1 className="text-primary-900 mb-8 text-4xl font-bold">Sobre mí</h1>
+      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between items-center">
+        <h1 className="text-primary-900 mt-2 md:mt-10 md:mb-10 text-4xl font-bold">Sobre mí</h1>
+        <div className="block md:hidden">
+          <IndexList />
+        </div>
       </div>
       <div className="second-part-of-section overflow-x-auto py-4 snap-x snap-mandatory flex gap-4">
         {cardGroups.map((group, index) => (

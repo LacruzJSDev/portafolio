@@ -2,6 +2,7 @@ import { FC } from "react";
 import Divider from "../../UI/Divider/Divider";
 import { ArrowRightFromLine, ClipboardCopy } from "lucide-react";
 import useCopyBoard from "../../../hooks/useCopyBoard";
+import IndexList from "../../shared/IndexList/IndexList";
 
 const Contact: FC = () => {
   const email: string = "jclacruzlacruz@icloud.com";
@@ -15,8 +16,11 @@ const Contact: FC = () => {
   });
   return (
     <section>
-      <div className="first-part-of-section p-6 flex flex-col items-center bg-primary-500">
-        <h1 className="text-primary-900 whitespace-nowrap mb-16">Contacto</h1>
+      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between items-center">
+        <h1 className="text-primary-900 mt-2 md:mt-10 md:mb-10 text-4xl font-bold">Contacto</h1>
+        <div className="block md:hidden">
+          <IndexList />
+        </div>
       </div>
       <div className="second-part-of-section p-6">
         <div>

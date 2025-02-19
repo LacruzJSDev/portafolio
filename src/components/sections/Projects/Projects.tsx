@@ -1,6 +1,7 @@
 import { FC } from "react";
 import ExpandableCard from "../../shared/ExpandableCard/ExpandableCard";
 import ExpandableImage from "../../shared/ExpandableImage/ExpandableImage";
+import IndexList from "../../shared/IndexList/IndexList";
 
 
 const imagesArray = [
@@ -30,7 +31,7 @@ const proyects = [
 						</div>
           ))}
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center mt-4">
           <a
             href="https://resiadmin.vercel.app/"
             target="_blank"
@@ -58,8 +59,11 @@ const proyects = [
 const Projects: FC = () => {
   return (
     <section>
-      <div className="first-part-of-section p-6 flex flex-col items-center bg-primary-500">
-        <h1 className="text-primary-900 whitespace-nowrap mb-16">Proyectos</h1>
+      <div className="first-part-of-section bg-primary-500 text-center flex flex-col justify-between items-center">
+        <h1 className="text-primary-900 mt-2 md:mt-10 md:mb-10 text-4xl font-bold">Proyectos</h1>
+        <div className="block md:hidden">
+          <IndexList />
+        </div>
       </div>
       <div className="second-part-of-section grid gap-6 px-4 py-2">
         {proyects.map((work, index) => (
